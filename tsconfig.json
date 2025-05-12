@@ -1,0 +1,21 @@
+{
+	"compilerOptions": {
+		"module": "esnext",
+		"target": "es2017",
+		"sourceMap": false,
+		"declaration": true,
+		"emitDeclarationOnly": true,
+		"strict": true,
+		"newLine": "LF",
+		"removeComments": false,
+		"outDir": "dist/",
+		"declarationDir": "dist/"
+	},
+	"include": [
+		"./src/**/*.ts"
+	],
+	"exclude": [
+		"node_modules",
+		"dist",
+	],
+}

@@ -1,0 +1,47 @@
+{
+  "name": "typed-screeps-server",
+  "version": "0.0.1",
+  "description": "Typescript types for the Screeps private server",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/index.d.ts"
+  ],
+  "keywords": [
+    "Screeps",
+    "API",
+    "Typescript",
+    "Autocomplete"
+  ],
+  "scripts": {
+    "ts": "tsc -p tsconfig.json",
+    "format": "npm run format:build && npm run format:src",
+    "format:build": "prettier --write 'build/**/*.js'",
+    "format:src": "prettier --write 'src/**/*.ts'",
+    "test": "npm run compile && npm run lint:test",
+    "lint": "eslint -c eslint.config.mjs",
+    "lint:test": "eslint -c eslint.config.test.mjs dist/screeps-tests.ts"
+  },
+  "author": "Etienne Samson <samson.etienne@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/lodash": "^3.10.9",
+    "@types/node": "^10.17.60",
+    "@types/q": "^1.5.8",
+    "eslint": "^9.7.0",
+    "eslint-plugin-expect-type": "^0.4.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.8",
+    "prettier": "^2.6.2",
+    "typescript": "^5.5.0",
+    "typescript-eslint": "^7.16.1"
+  },
+  "dependencies": {
+    "lodash": "^3.10.1",
+    "q": "^1.5.1"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "prettier --write"
+    ]
+  }
+}

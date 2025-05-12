@@ -1,0 +1,13 @@
+{
+    "private": true,
+    "name": "@types/screeps-server",
+    "version": "0.0.1",
+    "projects": [
+        "https://github.com/screeps/screeps"
+    ],
+    "devDependencies": {
+        "@types/screeps-server": "workspace:."
+    },
+    "owners": [
+    ]
+}
