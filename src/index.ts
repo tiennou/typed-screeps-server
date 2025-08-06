@@ -92,6 +92,7 @@ interface ServerConfig {
 			pubsub: any;
 			resetAllData(): Promise<void>;
 		};
+		bots: { [name: string]: string };
 	};
 	engine: EventEmitter;
 	cli: CliSandbox & EventEmitter;
