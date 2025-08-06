@@ -13,11 +13,11 @@
     "Autocomplete"
   ],
   "scripts": {
-    "ts": "tsc -p tsconfig.json",
-    "format": "npm run format:build && npm run format:src",
-    "format:build": "prettier --write 'build/**/*.js'",
+    "build": "tsc -p tsconfig.json",
+    "format": "npm run format:dist && npm run format:src",
+    "format:dist": "prettier --write 'dist/**/*.js'",
     "format:src": "prettier --write 'src/**/*.ts'",
-    "test": "npm run compile && npm run lint:test",
+    "test": "npm run build && npm run lint:test",
     "lint": "eslint -c eslint.config.mjs",
     "lint:test": "eslint -c eslint.config.test.mjs dist/screeps-tests.ts"
   },
